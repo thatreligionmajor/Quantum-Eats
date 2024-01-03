@@ -1,0 +1,65 @@
+/* 
+    Author: Theresa Barkasy;
+    Theme: Restaurant Web Application;
+    Version: 1.0;
+
+*/
+/* All CSS */
+* {
+    margin: 0 0;
+    padding: 0 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 1%;
+}
+.text-right {
+    text-align: right;
+}
+a {
+    color: #92AD9F;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+a:hover {
+    color: #618484;
+}
+/* Navbar CSS */
+.navbar {
+    vertical-align: middle;
+    background: #EFFDF5;
+}
+.logo {
+    width: 20%;
+    display: flex;
+    float: left;
+}
+.navbar-title {
+    padding: 1%;
+    color: black;
+    font-weight: bolder;
+    letter-spacing: .1rem;
+}
+.navbar-logo {
+    padding-right: 1%;
+    padding-bottom: 1%;
+    width: 13%;
+    height: 13%;
+}
+.menu ul {
+    list-style-type: none;
+}
+.menu ul li {
+    display: inline;
+    padding: 1%;
+}
+/* Search CSS */
+
+
+/* Footer CSS */
+.footer {
+    background: #EFFDF5;
+}
