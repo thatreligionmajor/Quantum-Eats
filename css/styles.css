@@ -91,6 +91,9 @@ a:hover {
     display: inline;
     padding: 1%;
 }
+.row {
+    display: flex;
+}
 /* Search CSS */
 .search {
     background-image: url(../images/search-background.png);
@@ -118,7 +121,6 @@ a:hover {
 .catcard {
     border: 1px solid #384B41;
     width: 28%;
-    float: left;
     margin: 2%;
     border-radius: 20px;
 }
@@ -129,7 +131,7 @@ a:hover {
     text-align: center;
 }
 .cat-img {
-    border-radius: 20px;
+    border-radius: 0 0 20px 20px;
 }
 /* Menu CSS */
 .menucard {
