@@ -18,6 +18,9 @@
 .text-right {
     text-align: right;
 }
+.text-center {
+    text-align: center;
+}
 a {
     color: #92AD9F;
     text-decoration: none;
@@ -26,6 +29,27 @@ a {
 }
 a:hover {
     color: #618484;
+}
+.button {
+    padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 20px;
+}
+.button-primary {
+    color: white;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    background-color: #92AD9F;
+}
+.button-primary:hover {
+    background-color: #618484;
+}
+.button-primary:active {
+    background-color: #567777;
+}
+.button:hover {
+    cursor: pointer;
 }
 /* Navbar CSS */
 .navbar {
@@ -65,8 +89,24 @@ a:hover {
     padding: 6% 0;
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
 }
-/* */
+.search-button {
+    border-radius: 0 20px 20px 0;
+}
+.search input[type="search"]{
+    width: 50%;
+    padding: 1%;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    letter-spacing: .04rem;
+}
+/* Categories CSS */
+
+/* Menu CSS */
+
+/* Socials CSS */
 
 /* Footer CSS */
 .footer {
