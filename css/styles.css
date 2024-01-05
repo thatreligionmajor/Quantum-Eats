@@ -116,22 +116,31 @@ a:hover {
 /* Categories CSS */
 .categories {
     padding: 3% 0;
-    overflow: visible;
+    background-color: #EFFDF5;
 }
 .catcard {
-    border: 1px solid #384B41;
+    /* border: 1px solid #384B41; */
     width: 28%;
     margin: 2%;
-    border-radius: 20px;
+    max-height: 353px;
 }
 .card-title {
-    color: #567777;
+    background-color: #92AD9F;
+    color: white;
+    padding: 1rem;
+    border-radius: 20px 20px 0 0;
     font-weight: bolder;
     letter-spacing: .1rem;
     text-align: center;
 }
 .cat-img {
     border-radius: 0 0 20px 20px;
+}
+img { 
+    width: 100%;
+    height: auto;
+    /* height: 250px; */
+    object-fit: cover;
 }
 /* Menu CSS */
 .menucard {
