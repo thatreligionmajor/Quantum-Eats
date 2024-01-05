@@ -15,6 +15,10 @@
     margin: 0 auto;
     padding: 1%;
 }
+.section-header {
+    color: #384B41;
+    font-size: 2rem;
+}
 .text-right {
     text-align: right;
 }
@@ -51,21 +55,24 @@ a:hover {
 .button:hover {
     cursor: pointer;
 }
+.img-responsive {
+    width: 100%;
+}
 /* Navbar CSS */
 .navbar {
-    vertical-align: top;
+    vertical-align: center;
     background: #EFFDF5;
 }
 .logo {
     width: 50%;
     display: flex;
     float: left;
-    padding-bottom: 4%;
+    padding-bottom: 1%;
     /* vertical-align: top; */
 }
 .navbar-title {
     padding: 1%;
-    color: black;
+    color: #384B41;
     font-weight: bolder;
     letter-spacing: .1rem;
 }
@@ -76,10 +83,10 @@ a:hover {
     height: 25px;
     display: flex;
 }
-.menu ul {
+.nav-menu ul {
     list-style-type: none;
 }
-.menu ul li {
+.nav-menu ul li {
     display: inline;
     padding: 1%;
 }
@@ -103,9 +110,25 @@ a:hover {
     letter-spacing: .04rem;
 }
 /* Categories CSS */
-
+.categories {
+    padding: 3% 0;
+}
+.catcard {
+    border: 1px solid #384B41;
+    width: 28%;
+    float: left;
+    margin: 2%;
+}
+.card-title {
+    color: #567777;
+}
 /* Menu CSS */
-
+.menu {
+    padding: 0 0 3% 0;
+}
+.menucard {
+    border: 1px solid #384B41;
+}
 /* Socials CSS */
 
 /* Footer CSS */
