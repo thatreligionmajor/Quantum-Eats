@@ -12,6 +12,7 @@
 }
 .container {
     width: 80%;
+    height: 100%;
     margin: 0 auto;
     padding: 1%;
 }
@@ -112,20 +113,25 @@ a:hover {
 /* Categories CSS */
 .categories {
     padding: 3% 0;
+    overflow: visible;
 }
 .catcard {
     border: 1px solid #384B41;
     width: 28%;
     float: left;
     margin: 2%;
+    border-radius: 20px;
 }
 .card-title {
     color: #567777;
+    font-weight: bolder;
+    letter-spacing: .1rem;
+    text-align: center;
+}
+.cat-img {
+    border-radius: 20px;
 }
 /* Menu CSS */
-.menu {
-    padding: 0 0 3% 0;
-}
 .menucard {
     border: 1px solid #384B41;
 }
@@ -134,4 +140,10 @@ a:hover {
 /* Footer CSS */
 .footer {
     background: #EFFDF5;
+}
+
+
+/* Testing CSS */
+section {
+    border: 1px solid red;
 }
