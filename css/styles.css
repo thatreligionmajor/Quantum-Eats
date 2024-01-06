@@ -13,6 +13,12 @@
 h2 {
     margin-bottom: 1%;
 }
+@media(max-width:1023px)
+{
+    h3 {
+    font-size: 3vw;
+ }
+}
 .container {
     width: 80%;
     height: 100%;
