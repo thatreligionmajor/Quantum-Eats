@@ -59,6 +59,9 @@ a:hover {
 .img-responsive {
     width: 100%;
 }
+.img-rounded {
+    border-radius: 20px;
+}
 /* Navbar CSS */
 .navbar {
     vertical-align: center;
@@ -124,6 +127,9 @@ a:hover {
     margin: 2%;
     max-height: 353px;
 }
+.catcard:hover{
+    cursor: pointer;
+}
 .card-title {
     background-color: #92AD9F;
     color: white;
@@ -143,11 +149,63 @@ img {
     object-fit: cover;
 }
 /* Menu CSS */
+.menu {
+    background-color: #92AD9F;
+    padding: 3% 0;
+}
+.menu-header {
+    color: white;
+}
 .menucard {
-    border: 1px solid #384B41;
+    /* border: 1px solid #384B41; */
+    width: 45%;
+    margin: 1%;
+    padding: 1.5%;
+    background: #EFFDF5;
+    border-radius: 20px;
+    display: flex;
+}
+.menu-button {
+    padding: 2% 5%;
+    border-radius: 10px;
+}
+.menu-button svg {
+    vertical-align: bottom;
+} 
+.menu-button:hover {
+    color: white;
+}
+.menu-img {
+    width: 30%; 
+}
+
+.menu-img img {
+    object-fit: cover;
+}
+.menucard-right {
+    /* width: 60%; */
+    padding-left: 1%;
+}
+.menu-item {
+    letter-spacing: .06rem;
+    font-weight: bolder;
+}
+.menu-price {
+    font-size: 1.2rem;
+    margin: 2% 0;
+}
+.menu-description {
+    letter-spacing: .02rem;
+    padding-bottom: 1%;
 }
 /* Socials CSS */
-
+.social-media {
+    background-image: url(../images/search-background.png);
+    padding: 1% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 /* Footer CSS */
 .footer {
     background: #EFFDF5;
