@@ -2,8 +2,9 @@
 A molecular gastronomy restaurant website, built from scratch with HTML, CSS, PHP and MySQL.
 # Screenshots
 ## Desktop Screen
-![Homepage](images/quantum-eats-homepage.png)
-<!-- ## Mobile and Tablet Screen -->
+![Homepage](screenshots/quantum-eats-desktop-homepage.png)
+## Mobile and Tablet Screen
+![Homepage](screenshots/quantum-eats-mobile-homepage.png)
 
 # Special Thanks and Credits
 <!-- Search Background -->

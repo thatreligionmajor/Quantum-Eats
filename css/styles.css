@@ -243,6 +243,7 @@ img {
         float: none;
         margin: 0 auto;
         display: flex;
+        text-align: center;
     }
     .nav-menu {
         text-align: center;
@@ -256,21 +257,37 @@ img {
         border-radius: 20px 0 0 20px;
         /* letter-spacing: .04rem; */
     }
+    .categories .container {
+        width: 95%;
+    }
+    h2 {
+        font-size: x-large !important;
+    }
+    .menu .container {
+        width: 90%;
+    }
     .menucard {
         display: inline;
         text-align: center; 
         padding-bottom: 1rem;
     }
+    .menu-img {
+        width: 95%;
+        margin: .2rem auto;
+    }
     .menu-item {
         font-size: large;
         min-height: 4rem;
+    }
+    .menu-price {
+        padding-top: .1rem;
     }
     .menu-description {
         /* font-size: small; */
         display: none;;
     }
     .menu-button {
-        padding: 0.5rem 3rem;
+        padding: 0.5rem 3.5rem;
     }
 }
 /* Testing CSS */
