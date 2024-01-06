@@ -236,6 +236,43 @@ img {
 .footer {
     background: #EFFDF5;
 }
+/* CSS for Mobile or Small Screen */
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 50%;
+        float: none;
+        margin: 0 auto;
+        display: flex;
+    }
+    .nav-menu {
+        text-align: center;
+    }
+    .search input[type="search"]{
+        width: 50%;
+        padding: 1.8%;
+        padding-left: 4%;
+        font-size: .75rem;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        /* letter-spacing: .04rem; */
+    }
+    .menucard {
+        display: inline;
+        text-align: center; 
+        padding-bottom: 1rem;
+    }
+    .menu-item {
+        font-size: large;
+        min-height: 4rem;
+    }
+    .menu-description {
+        /* font-size: small; */
+        display: none;;
+    }
+    .menu-button {
+        padding: 0.5rem 3rem;
+    }
+}
 /* Testing CSS */
 /* section {
     border: 1px solid red;
