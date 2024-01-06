@@ -1,7 +1,7 @@
 # Quantum Eats
 
 # Screenshots
-![Homepage](quantum-eats-homepage.png)
+![Homepage](images/quantum-eats-homepage.png)
 
 # Special Thanks and Credits
 <!-- Search Background -->
