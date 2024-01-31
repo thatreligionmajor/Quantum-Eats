@@ -17,14 +17,18 @@
         <!-- Main Content Section Starts -->
         <main>
             <div class="main">
-                Main Section Here
+                <div class="wrapper">
+                    Main Section Here
+                </div>
             </div>
         </main>
         <!-- Main Content Section Ends -->
         <!-- Footer Section Starts -->
         <footer>
             <div class="footer">
-                Footer Section Here
+                <div class="wrapper">
+                    Footer Section Here
+                 </div>
             </div>
         </footer>
         <!-- Footer Section Ends -->
