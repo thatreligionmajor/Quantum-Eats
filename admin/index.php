@@ -27,7 +27,11 @@
         <footer>
             <div class="footer">
                 <div class="wrapper">
-                    Footer Section Here
+                    <p> 
+                        <?php 
+                            echo "© " . date("Y") . " - All Rights Reserved, Quantum Eats. Developed by - <a href='https://github.com/thatreligionmajor'>Theresa Barkasy</a>";
+                        ?>
+                    </p>
                  </div>
             </div>
         </footer>
