@@ -10,28 +10,35 @@
             <div class="menu text-center">
                 <div class="wrapper">
                     <ul>
-                        <li><a href="#">Home</li>
-                        <li><a href="#">Admin Manager</li>
-                        <li><a href="#">Category</li>
-                        <li><a href="#">Food</li>
-                        <li><a href="#">Order</li>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Admin Manager</a></li>
+                        <li><a href="#">Category</a></li>
+                        <li><a href="#">Food</a></li>
+                        <li><a href="#">Order</a></li>
                     </ul>
                 </div>
             </div>
         </section>
         <!-- Menu Section Ends -->
         <!-- Main Content Section Starts -->
-        <main>
-            <div class="main">
-                <div class="wrapper">
-                    Main Section Here
+        <section>
+            <main>
+                <div class="main">
+                    <div class="wrapper">
+                        <strong>Dashboard</strong>
+                        
+                        <div class="col-4">
+                            <h2>5</h2>
+                            Categories
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </main>
-        <!-- Main Content Section Ends -->
-        <!-- Footer Section Starts -->
-        <footer>
-            <div class="footer">
+            </main>
+        </section>
+            <!-- Main Content Section Ends -->
+            <!-- Footer Section Starts -->
+            <footer>
+                <div class="footer">
                 <div class="wrapper">
                     <p class="text-center"> 
                         <?php 
