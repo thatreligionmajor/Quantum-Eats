@@ -4,12 +4,18 @@
         <link rel="stylesheet" href="../css/admin.css">
     </head>
     <body>
-        <h1>Admin Panel</h1>
+        <!-- <h1>Admin Panel</h1> -->
         <!-- Menu Section Starts -->
         <section>
-            <div class="menu">
+            <div class="menu text-center">
                 <div class="wrapper">
-                    Menu Section Here
+                    <ul>
+                        <li><a href="#">Home</li>
+                        <li><a href="#">Admin Manager</li>
+                        <li><a href="#">Category</li>
+                        <li><a href="#">Food</li>
+                        <li><a href="#">Order</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -27,7 +33,7 @@
         <footer>
             <div class="footer">
                 <div class="wrapper">
-                    <p> 
+                    <p class="text-center"> 
                         <?php 
                             echo "© " . date("Y") . " - All Rights Reserved, Quantum Eats. Developed by - <a href='https://github.com/thatreligionmajor'>Theresa Barkasy</a>";
                         ?>
