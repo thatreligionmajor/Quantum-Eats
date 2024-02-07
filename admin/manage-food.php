@@ -1,10 +1,10 @@
-<?php include('components/navbar.php');?>
-<!-- Main Content Section Starts -->
+<?php include('components/navbar.php'); ?>
+
 <section>
     <main>
         <div class="main">
             <div class="wrapper">
-                <h1>Admin Manager</h1>
+                <h1>Food Manager</h1>
                 <div class="row text-center">
                     
                 </div>
@@ -12,5 +12,5 @@
         </div>
     </main>
 </section>
-<!-- Main Content Section Ends -->
-<?php include('components/footer.php');?>
+
+<?php include('components/footer.php'); ?>
