@@ -23,6 +23,11 @@
     text-align: center;
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
 a {
     color: #92AD9F;
     text-decoration: none;
@@ -61,6 +66,13 @@ a:hover {
     padding: 1% 0;
     background-color: #92AD9F;
     color: white;
+}
+
+.col-4 {
+    width: 20%;
+    background: #809b8d;
+    margin: 1%;
+    padding: 2%;
 }
 
 

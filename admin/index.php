@@ -26,10 +26,27 @@
                 <div class="main">
                     <div class="wrapper">
                         <strong>Dashboard</strong>
-                        
-                        <div class="col-4">
-                            <h2>5</h2>
-                            Categories
+                        <div class="row">
+                            <div class="col-4 text-center">
+                                <h2>5</h2>
+                                    </br>
+                                Categories
+                            </div>
+                            <div class="col-4 text-center">
+                                <h2>5</h2>
+                                    </br>
+                                Categories
+                            </div>
+                            <div class="col-4 text-center">
+                                <h2>5</h2>
+                                    </br>
+                                Categories
+                            </div>
+                            <div class="col-4 text-center">
+                                <h2>5</h2>
+                                    </br>
+                                Categories
+                            </div>
                         </div>
                     </div>
                 </div>
