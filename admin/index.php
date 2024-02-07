@@ -25,7 +25,7 @@
             <main>
                 <div class="main">
                     <div class="wrapper">
-                        <strong>Dashboard</strong>
+                        <h1>Dashboard</h1>
                         <div class="row">
                             <div class="col-4 text-center">
                                 <h2>5</h2>
