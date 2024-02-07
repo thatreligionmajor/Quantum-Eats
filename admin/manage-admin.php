@@ -25,28 +25,9 @@
             <main>
                 <div class="main">
                     <div class="wrapper">
-                        <h1>Dashboard</h1>
-                        <div class="row">
-                            <div class="col-4 text-center">
-                                <h2>5</h2>
-                                    </br>
-                                Categories
-                            </div>
-                            <div class="col-4 text-center">
-                                <h2>5</h2>
-                                    </br>
-                                Categories
-                            </div>
-                            <div class="col-4 text-center">
-                                <h2>5</h2>
-                                    </br>
-                                Categories
-                            </div>
-                            <div class="col-4 text-center">
-                                <h2>5</h2>
-                                    </br>
-                                Categories
-                            </div>
+                        <h1>Manage Admin</h1>
+                        <div class="row text-center">
+                            
                         </div>
                     </div>
                 </div>
