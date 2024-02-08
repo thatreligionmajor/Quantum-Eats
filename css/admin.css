@@ -65,19 +65,32 @@ table tr td {
     border: none;
     font-size: 1rem;
     border-radius: 20px;
-}
-.btn-primary {
-    color: white;
     font-weight: bold;
     letter-spacing: .1rem;
-    background-color: #77A5FF;
-    padding: 1%;
+    color: white;
+}
+.btn-primary {
+    background: #77A5FF;
+}
+.btn-primary:hover{
+    color: #e4ebfa;
+    background: #628ce0;
 }
 .btn-secondary {
     background: #4FB98C;
+    padding: 2%;
+}
+.btn-secondary:hover{
+    color: #ddf8ed;
+    background: #43a77d;
 }
 .btn-danger {
     background: #DA9683;
+    padding: 2%;
+}
+.btn-danger:hover{
+    color: #f5dcd4;
+    background: #c77b65;
 }
 
 /* CSS for Menu */
