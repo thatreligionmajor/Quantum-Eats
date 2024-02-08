@@ -3,7 +3,7 @@ A molecular gastronomy restaurant website, built from scratch with HTML, CSS, PH
 
 ## Features
 <details>
-<summary> <h3>Frontend Features:</h3></summary>
+<summary><h3>&nbsp;Frontend Features:</h3></summary>
 <br>
 <p><b>Interactive Menu:</b> Explore a curated menu of molecular gastronomy dishes, each with detailed descriptions and images.</p>
 <p><b>Order Placement:</b> Easily navigate through the menu to select and place orders for your desired dishes.</p>
@@ -11,7 +11,7 @@ A molecular gastronomy restaurant website, built from scratch with HTML, CSS, PH
 </details>
 
 <details>
-<summary><h3>Backend Features:</h3></summary>
+<summary><h3>&nbsp;Backend Features:</h3></summary>
 <br>
   <p><b>Admin Management:</b> Add and delete admin users to manage website operations securely.</p>
   <p><b>Order Management:</b> View, manage, and track orders placed by customers in real time.
@@ -20,9 +20,8 @@ Update order statuses to keep customers informed about their order progress.</p>
   <p><b>Authentication:</b> Secure login system for admin users to access backend functionalities and perform administrative tasks.</p>
 </details>
 
-
 <details>
-<summary><h3>Additional Features:</h3></summary>
+<summary><h3>&nbsp;Additional Features:</h3></summary>
 <br>
   <p><b>Data Persistence:</b> Utilize databases to store and retrieve information about menu items, orders, and admin users for seamless data management.</p>
   <p><b>User-Friendly Interface:</b> Intuitive and responsive user interface design for both frontend and backend, ensuring a pleasant browsing and administrative experience.</p>
