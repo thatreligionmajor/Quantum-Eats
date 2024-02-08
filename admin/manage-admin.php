@@ -4,9 +4,15 @@
     <main>
         <div class="main">
             <div class="wrapper">
-                <h1>Admin Manager</h1>
-                <!-- Button to Add Admin -->
-                <a href="#" class ="btn-primary btn-top">Add Admin</a>
+                <div class="header">
+                    <h1>Admin Manager</h1>
+                    <!-- Button to Add Admin -->
+                    <br />
+                    <br />
+                    <br />
+                    <a href="#" class ="button btn-primary">Add Admin</a>
+                    <br />
+                </div>
                 <table class="tbl-full">
                     <tr>
                         <th>Serial Number</th>
