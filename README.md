@@ -1,5 +1,5 @@
 # Quantum Eats
-A molecular gastronomy restaurant website, built from scratch with HTML, CSS, PHP and MySQL.
+> A molecular gastronomy restaurant website, built from scratch with HTML, CSS, PHP and MySQL.
 
 ## Features
 <details>
