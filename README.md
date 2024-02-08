@@ -33,9 +33,9 @@ Update order statuses to keep customers informed about their order progress.</p>
 
 ## Screenshots
 ### Desktop Screen
-![Homepage](screenshots/quantum-eats-desktop-homepage.png)
+![Homepage Desktop](screenshots/quantum-eats-desktop-homepage.png)
 ### Mobile and Tablet Screen
-![Homepage](screenshots/quantum-eats-mobile-homepage.png)
+![Homepage Mobile](screenshots/quantum-eats-mobile-homepage.png)
 
 ## Special Thanks and Credits
 <!-- Search Background -->
