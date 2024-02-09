@@ -10,7 +10,7 @@
                     <br />
                     <br />
                     <br />
-                    <a href="#" class ="button btn-primary">Add Admin</a>
+                    <a href="add-admin.php" class ="button btn-primary">Add Admin</a>
                     <br />
                 </div>
                 <table class="tbl-full">
