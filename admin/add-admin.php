@@ -13,7 +13,7 @@
                     <!-- <a href="add-admin.php" class ="button btn-primary">Add Admin</a> -->
                     <br />
                     <form action="" method="POST" >
-                        <table>
+                        <table class="tbl-30">
                             <tr>
                                 <td>Full Name: </td>
                                 <td><input type="text" name="full_name" placeholder="enter your name"></td>
