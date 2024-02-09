@@ -34,8 +34,8 @@
                         <td>Your Name</td>
                         <td>yourusername</td>
                         <td>
-                            Update Admin
-                            Delete Admin
+                            <a href="#" class ="button btn-secondary">Update Admin</a>
+                            <a href="#" class ="button btn-danger">Delete Admin</a>
                         </td>
                     </tr>
                     <tr>
@@ -43,8 +43,8 @@
                         <td>Your Name</td>
                         <td>yourusername</td>
                         <td>
-                            Update Admin
-                            Delete Admin
+                            <a href="#" class ="button btn-secondary">Update Admin</a>
+                            <a href="#" class ="button btn-danger">Delete Admin</a>
                         </td>
                     </tr>
                 </table>
