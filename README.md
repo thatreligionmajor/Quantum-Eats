@@ -39,7 +39,7 @@ Update order statuses to keep customers informed about their order progress.</p>
 
 ## Special Thanks and Credits
 <!-- Search Background -->
-Texture created by [Ruvim Noga](https://unsplash.com/photos/blue-red-and-black-smoke-digital-wallpaper-pazM9TQJ2Ck)
+Texture created by [Ruvim Noga](https://unsplash.com/photos/blue-red-and-black-smoke-digital-wallpaper-pazM9TQJ2Ck)  
 Images created in tandem with [NightCafe](https://creator.nightcafe.studio/studio?gad_source=1&gclid=Cj0KCQiAkeSsBhDUARIsAK3tiefTHhVQ8K37DRBvgTOkNnGutCEnVwfhuzfUbjuPM8Z5NQLk45NXoosaAozNEALw_wcB)
   
   <!-- 
