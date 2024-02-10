@@ -53,6 +53,9 @@ a:hover {
 }
 .tbl-30 {
     width: 30%;
+    color: white;
+    margin: 1%;
+    padding: 2%;
 }
 table tr th {
     border-bottom: 1px solid white;

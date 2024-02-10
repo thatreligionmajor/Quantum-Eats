@@ -15,8 +15,31 @@
                     <form action="" method="POST" >
                         <table class="tbl-30">
                             <tr>
+                                <th>Label</th>
+                                <th>Input</th>
+                            </tr>
+                            <tr>
                                 <td>Full Name: </td>
-                                <td><input type="text" name="full_name" placeholder="enter your name"></td>
+                                <td>
+                                    <input type="text" name="full_name" placeholder="your name">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Username: </td>
+                                <td>
+                                    <input type="text" name="username" placeholder="your username">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Password: </td>
+                                <td>
+                                    <input type="password" name="password" placeholder="your password">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" name="submit" value="add admin" class="btn-secondary">
+                                </td>
                             </tr>
                         </table>
                     </form>
