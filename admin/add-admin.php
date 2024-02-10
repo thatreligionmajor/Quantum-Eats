@@ -51,3 +51,23 @@
 </section>
 
 <?php include('components/footer.php');?>
+<?php 
+    //process the value from form and save it in the database
+    //check whether the submit button is clicked or not
+    if(isset($_POST['submit']))
+    {
+        //button clicked
+        // echo "button clicked";
+
+        //1. get the form data`
+        $full_name = $_POST['full_name'];
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        //2. SQL Query to save the data into the database
+        $sql = "INSERT INTO tbl_admin SET 
+        full_name = '$full_name',
+        username= '$username',
+        password = '$password'
+        ";
+    }
+?>
