@@ -86,6 +86,13 @@ img {
 .shadow:hover {
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.4), 0 0 .75rem rgba(0, 0, 0, 0.4), 0 0 1rem rgba(0, 0, 0, 0.4);
 }
+/* CSS Not In Use, but to be applied to catcard, it's just not working on mobile */
+/* .bigger {
+    transition: 0.4s ease;
+}
+.bigger:hover {
+    transform: scale(1.01);
+} */
 /* Navbar CSS */
 .navbar {
     vertical-align: center;
@@ -299,6 +306,9 @@ img {
     }
 }
 /* Testing CSS */
-/* section {
+/* div {
     border: 1px solid red;
+}
+img {
+    border: 1px solid blue;
 } */
