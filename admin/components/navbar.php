@@ -1,3 +1,5 @@
+<?php include('config/constants.php');?>
+
 <html>
     <head>
         <title>Quantum Eats - Home Page</title>
