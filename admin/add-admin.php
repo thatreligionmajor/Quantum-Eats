@@ -62,12 +62,14 @@
         //1. get the form data`
         $full_name = $_POST['full_name'];
         $username = $_POST['username'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']); //password encryption with md5
         //2. SQL Query to save the data into the database
         $sql = "INSERT INTO tbl_admin SET 
         full_name = '$full_name',
         username= '$username',
         password = '$password'
         ";
+        
+        //$res = mysqli_query($conn, $sql) or die(mysquli_error());
     }
 ?>
