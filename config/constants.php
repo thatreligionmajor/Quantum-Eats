@@ -1,5 +1,8 @@
 <?php
+//start the session
+session_start();
 //constants
+define('SITEURL', 'http://localhost/Quantum-Eats/');
 define('LOCALHOST', 'localhost');
 define('DB_USERNAME', 'root');
 define('DB_PASSWORD', '');

@@ -8,6 +8,14 @@
                     <h1>Add Admin</h1>
                     <!-- Button to Add Admin -->
                     <br />
+                    <?php 
+                        if(isset($_SESSION['add']))
+                        {
+                            echo $_SESSION['add'];
+                            unset($_SESSION['add']);
+                        }
+                    ?>
+                    <br />
                     <br />
                     <br />
                     <!-- <a href="add-admin.php" class ="button btn-primary">Add Admin</a> -->
@@ -38,7 +46,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <input type="submit" name="submit" value="add admin" class="btn-secondary">
+                                    <input type="submit" name="submit" value="add admin" class="button btn-secondary">
                                 </td>
                             </tr>
                         </table>
@@ -69,7 +77,25 @@
         username= '$username',
         password = '$password'
         ";
-        
-        //$res = mysqli_query($conn, $sql) or die(mysquli_error());
+        //3. execute query and save the data into the database
+        $res = mysqli_query($conn, $sql) or die(mysquli_error());
+        //4. check whether the (query is executed) data is inserted or not and display the appropriate message
+        if($res==TRUE)
+        {
+            //data inserted
+            //echo "data inserted";
+            //create a session variable to display message
+            $_SESSION['add'] = "Admin Successfully Created";
+            //redirect page to Admin Manager
+            header('location:' . SITEURL . 'admin/manage-admin.php');
+        }
+        else {
+            //failed to insert data
+            //echo "failed to insert data";
+            //create a session variable to display message
+            $_SESSION['add'] = "Failed to Add Admin";
+            //redirect page to Add Admin
+            header('location:' . SITEURL . 'admin/add-admin.php');
+        }
     }
 ?>

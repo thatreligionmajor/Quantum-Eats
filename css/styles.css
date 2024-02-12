@@ -70,7 +70,6 @@ a:hover {
 img { 
     width: 100%;
     height: auto;
-    /* height: 250px; */
     object-fit: cover;
 }
 .img-responsive {
@@ -157,9 +156,9 @@ img {
     margin: 0 1%;
 }
 .catcard {
-    /* width: 28%; */
+    width: 90%;
     margin: 2%;
-    max-height: 390px;
+    /* max-height: 390px; */
     border-radius: 20px 20px 20px 20px;
 }
 .card-title {
@@ -173,7 +172,6 @@ img {
 }
 .cat-img {
     border-radius: 0 0 20px 20px;
-    max-height: 390px;
     object-fit: cover;
 }
 /* Menu CSS */

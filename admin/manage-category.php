@@ -10,6 +10,7 @@
                     <br />
                     <br />
                     <br />
+                    <br />
                     <a href="#" class ="button btn-primary">Add Category</a>
                     <br />
                 </div>

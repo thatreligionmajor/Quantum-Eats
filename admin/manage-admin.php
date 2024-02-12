@@ -8,6 +8,14 @@
                     <h1>Admin Manager</h1>
                     <!-- Button to Add Admin -->
                     <br />
+                    <?php  
+                        if(isset($_SESSION['add']))
+                        {
+                            echo $_SESSION['add']; //displaying session message
+                            unset($_SESSION['add']); //removing session message
+                        }
+                    ?>
+                    <br />
                     <br />
                     <br />
                     <a href="add-admin.php" class ="button btn-primary">Add Admin</a>
