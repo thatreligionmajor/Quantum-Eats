@@ -28,6 +28,18 @@
                         <th>Username</th>
                         <th>Actions</th>
                     </tr>
+                    <?php
+                        //query to get all admin
+                        $sql = "SELECT * FROM tbl_admin";
+                        //execute query
+                        $res = mysqli_query($conn, $sql);
+
+                        //check whether the query is executed successfully
+                        if($res=TRUE)
+                        {
+                            // count rows
+                        }
+                    ?>
                     <tr>
                         <td>1. </td>
                         <td>Your Name</td>
