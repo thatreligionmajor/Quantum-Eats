@@ -9,10 +9,10 @@
                     <!-- Button to Add Admin -->
                     <br />
                     <?php 
-                        if(isset($_SESSION['add']))
+                        if(isset($_SESSION['add'])) // check if session is set
                         {
-                            echo $_SESSION['add'];
-                            unset($_SESSION['add']);
+                            echo $_SESSION['add']; // display session message
+                            unset($_SESSION['add']); // clear session message
                         }
                     ?>
                     <br />
