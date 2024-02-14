@@ -30,7 +30,7 @@
                         }
                         else {
                             //check whether we have admin data or not
-                            if($count)
+                            if($count);
                         }
                     ?>
                     <form action="" method="POST" >
