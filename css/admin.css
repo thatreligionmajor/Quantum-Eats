@@ -44,6 +44,18 @@ a:hover {
     margin: 0 1% 1% 1%;
     padding: 0 2% 2% 2%;
 }
+.message {
+    width: 100%;
+    color: white;
+}
+.success {
+    background: #4FB98C;
+    padding: 1rem 0 1rem 0;
+}
+.error {
+    background: #DA9683;
+    padding: 1rem 0 1rem 0;
+}
 /* Table CSS */
 .tbl-full {
     width: 100%;

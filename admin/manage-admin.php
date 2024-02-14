@@ -14,12 +14,18 @@
                             echo $_SESSION['add']; //displaying session message
                             unset($_SESSION['add']); //removing session message
                         }
+                        if(isset($_SESSION['delete']))
+                        {
+                            echo $_SESSION['delete'];
+                            unset($_SESSION['delete']);
+                        }
                     ?>
                     <br />
                     <br />
                     <br />
                     <a href="add-admin.php" class ="button btn-primary">Add Admin</a>
                     <br />
+
                 </div>
                 <table class="tbl-full">
                     <tr>
@@ -60,7 +66,7 @@
                                             <td><?php echo $username; ?></td>
                                             <td>
                                                 <a href="#" class ="button btn-secondary">Update Admin</a>
-                                                <a href="#" class ="button btn-danger">Delete Admin</a>
+                                                <a href="<?php echo SITEURL; ?>admin/delete-admin.php?id=<?php echo $id; ?>" class ="button btn-danger">Delete Admin</a>
                                             </td>
                                         </tr>
                                     <?php
