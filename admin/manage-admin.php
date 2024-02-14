@@ -39,6 +39,7 @@
                         {
                             // count rows to check database data
                             $count = mysqli_num_rows($res); //function to get all rows in db
+                            $sn=1; //create a variable and assign the value
                             //check the number of rows
                             if($count>0)
                             {
@@ -54,7 +55,7 @@
                                     //display the values in our table
                                     ?>
                                         <tr>
-                                            <td><?php echo $id; ?> </td>
+                                            <td><?php echo $sn++; ?> </td>
                                             <td><?php echo $full_name; ?></td>
                                             <td><?php echo $username; ?></td>
                                             <td>
