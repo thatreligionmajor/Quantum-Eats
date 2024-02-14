@@ -35,38 +35,43 @@
                         $res = mysqli_query($conn, $sql);
 
                         //check whether the query is executed successfully
-                        if($res=TRUE)
+                        if($res==TRUE)
                         {
-                            // count rows
+                            // count rows to check database data
+                            $count = mysqli_num_rows($res); //function to get all rows in db
+                            //check the number of rows
+                            if($count>0)
+                            {
+                                //data in database
+                                while($rows=mysqli_fetch_assoc($res))
+                                {
+                                    //while loop to get data from database
+                                    //will run as long as there is data in database
+                                    //get individual data
+                                    $id=$rows['id'];
+                                    $full_name=$rows['full_name'];
+                                    $username=$rows['username'];
+                                    //display the values in our table
+                                    ?>
+                                        <tr>
+                                            <td><?php echo $id; ?> </td>
+                                            <td><?php echo $full_name; ?></td>
+                                            <td><?php echo $username; ?></td>
+                                            <td>
+                                                <a href="#" class ="button btn-secondary">Update Admin</a>
+                                                <a href="#" class ="button btn-danger">Delete Admin</a>
+                                            </td>
+                                        </tr>
+                                    <?php
+                                }
+                            }
+                            else 
+                            {
+                                //no data in db
+                            }
+
                         }
                     ?>
-                    <tr>
-                        <td>1. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
                 </table>
             </div>
         </div>
