@@ -30,7 +30,13 @@
                         }
                         else {
                             //check whether we have admin data or not
-                            if($count);
+                            if($count==1) {
+                                //details
+                            }
+                            else {
+                                //redirect to manage admin page
+                                header('location:'. SITEURL.'admin/manage-admin.php');
+                            }
                         }
                     ?>
                     <form action="" method="POST" >
