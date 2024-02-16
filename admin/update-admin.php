@@ -81,4 +81,14 @@
     </main>
 </section>
 
+<?php 
+    //check wether the submit button is clicked
+    if(isset($_POST['submit'])) {
+        //echo "button clicked"
+    }
+    else {
+        echo 
+    }
+?>
+
 <?php include('components/footer.php'); ?>

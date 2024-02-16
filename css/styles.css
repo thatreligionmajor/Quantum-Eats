@@ -71,6 +71,7 @@ img {
     width: 100%;
     height: auto;
     object-fit: cover;
+    display: block;
 }
 .img-responsive {
     width: 100%;
@@ -85,13 +86,21 @@ img {
 .shadow:hover {
     box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.4), 0 0 .75rem rgba(0, 0, 0, 0.4), 0 0 1rem rgba(0, 0, 0, 0.4);
 }
+/* .container .blur .linkrow:hover{
+    filter: none;
+} */
+.blur:hover .linkrow:not(:hover){
+    filter: blur(2px);
+    transition: 0.4s ease;
+    opacity: 0.85;
+}
 /* CSS Not In Use, but to be applied to catcard, it's just not working on mobile */
-/* .bigger {
+.bigger {
     transition: 0.4s ease;
 }
 .bigger:hover {
     transform: scale(1.01);
-} */
+}
 /* Navbar CSS */
 .navbar {
     vertical-align: center;
@@ -155,6 +164,10 @@ img {
     flex: auto;
     margin: 0 1%;
 }
+/* .linkrow:hover {
+    filter: none !important;
+    z-index: 10;
+} */
 .catcard {
     width: 90%;
     margin: 2%;
