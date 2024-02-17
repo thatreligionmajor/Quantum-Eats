@@ -6,10 +6,12 @@
             <div class="wrapper">
                 <div class="header">
                     <h1>Change Password</h1>
-                    <!-- Button to Update Admin -->
                     <br />
                     <?php 
-                        // 
+                        if(isset($_GET['id']))
+                        {
+                            $id=$_GET['id'];
+                        }
                     ?>
                     <br />
                     <br />
@@ -24,27 +26,27 @@
                                 <th>Input</th>
                             </tr>
                             <tr>
-                                <td>Full Name: </td>
+                                <td>Current Password: </td>
                                 <td>
-                                    <input type="text" name="full_name" value="<?php echo $full_name; ?>">
+                                    <input type="password" name="current_pasword" placeholder="Current Password">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Username: </td>
+                                <td>New Password: </td>
                                 <td>
-                                    <input type="text" name="username" value="<?php echo $username; ?>">
+                                    <input type="password" name="new_password" placeholder="New Password">
                                 </td>
                             </tr>
-                            <!-- <tr>
-                                <td>Password: </td>
+                            <tr>
+                                <td>Confirm Password: </td>
                                 <td>
-                                    <input type="password" name="password" value="">
+                                    <input type="password" name="confirm_password" placeholder="Confirm Password">
                                 </td>
-                            </tr> -->
+                            </tr>
                             <tr>
                                 <td colspan="2">
                                     <input type="hidden" name="id" value="<?php echo $id; ?>">
-                                    <input type="submit" name="submit" value="update admin" class="button btn-secondary">
+                                    <input type="submit" name="submit" value="change password" class="button btn-secondary">
                                 </td>
                             </tr> 
                         </table>
@@ -55,5 +57,16 @@
         </div>
     </main>
 </section>
+
+<?php 
+    if(isset($_POST['submit']))
+    {
+        //echo "clicked";
+        //1. Get the data from the form
+        //2. Check whether the user with Current ID and Current Password Exists
+        //3. Check whether the New Password and Confirm Password match
+        //4. Change Password
+    }
+?>
 
 <?php include('components/footer.php'); ?>
