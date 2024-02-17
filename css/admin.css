@@ -92,6 +92,7 @@ table tr td {
 }
 .btn-primary {
     background: #77A5FF;
+    padding: 1.5%;
 }
 .btn-primary:hover{
     color: #e4ebfa;
@@ -99,7 +100,7 @@ table tr td {
 }
 .btn-secondary {
     background: #4FB98C;
-    padding: 2%;
+    padding: 1.5%;
 }
 .btn-secondary:hover{
     color: #ddf8ed;
@@ -107,7 +108,7 @@ table tr td {
 }
 .btn-danger {
     background: #DA9683;
-    padding: 2%;
+    padding: 1.5%;
 }
 .btn-danger:hover{
     color: #f5dcd4;
