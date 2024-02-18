@@ -63,9 +63,30 @@
     {
         //echo "clicked";
         //1. Get the data from the form
+        $id=$_POST['id'];
+        $current_password=md5($_POST['current_password']);
+        $new_pasword=md5($_POST['new_password']);
+        $confirm_password=md5($_POST['confirm_password']);
         //2. Check whether the user with Current ID and Current Password Exists
-        //3. Check whether the New Password and Confirm Password match
-        //4. Change Password
+        $sql = "SELECT * FROM tbl_admin WHERE id =$id AND password = '$current_password'";
+        //3. Execute the query
+        $res = mysqli_query($conn, $sql);
+        if($res==true) 
+        {
+            $count=mysqli_num_rows($res);
+            if($count==1) 
+            {
+                //user exists and password can be changed
+                echo "User Found";
+            }
+            else 
+            {
+                //User does not exist, send a message and redirect
+                $SESSION['user-not-found'] = "<div class='error'>User Not Found</div>";
+            }
+        }
+        //4. Check whether the New Password and Confirm Password match
+        //5. Change Password
     }
 ?>
 
