@@ -24,6 +24,11 @@
                             echo $_SESSION['update'];
                             unset($_SESSION['update']);
                         }
+                        if(isset($_SESSION['user-not-found']))
+                        {
+                            echo$_SESSION['user-not-found'];
+                            unset($_SESSION['user-not-found']);
+                        }
                     ?>
                     <br />
                     <br />
