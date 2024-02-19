@@ -51,8 +51,7 @@
                             </tr> 
                         </table>
                     </form>
-                </div>
-                
+                </div>                
             </div>
         </div>
     </main>
@@ -68,7 +67,7 @@
         $new_pasword=md5($_POST['new_password']);
         $confirm_password=md5($_POST['confirm_password']);
         //2. Check whether the user with Current ID and Current Password Exists
-        $sql = "SELECT * FROM tbl_admin WHERE id =$id AND password = '$current_password'";
+        $sql = "SELECT * FROM tbl_admin WHERE id =$id AND password='$current_password'";
         //3. Execute the query
         $res = mysqli_query($conn, $sql);
         if($res==true) 
@@ -82,7 +81,8 @@
             else 
             {
                 //User does not exist, send a message and redirect
-                $SESSION['user-not-found'] = "<div class='error'>User Not Found</div>";
+                $_SESSION['user-not-found'] = "<div class='error'>User Not Found</div>";
+                header('location:'.SITEURL.'admin/manage-admin.php');
             }
         }
         //4. Check whether the New Password and Confirm Password match
