@@ -100,12 +100,12 @@
                         $_SESSION['change-password'] = "<div class='success'>Password Changed Successfully</div>";
                         header('location:'.SITEURL.'admin/manage-admin.php');
                     }
-                    else{
+                    else
+                    {
                         //display error message
                         //redirect to manage admin page with an error message
                         $_SESSION['change-password'] = "<div class='error'>Failed to Change Password</div>";
-                        header('location:'.SITEURL.'admin/manage-admin.php');
-                        
+                        header('location:'.SITEURL.'admin/manage-admin.php');s  
                     }
                 }
                 else{
