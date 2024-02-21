@@ -105,7 +105,7 @@
                         //display error message
                         //redirect to manage admin page with an error message
                         $_SESSION['change-password'] = "<div class='error'>Failed to Change Password</div>";
-                        header('location:'.SITEURL.'admin/manage-admin.php');s  
+                        header('location:'.SITEURL.'admin/manage-admin.php');  
                     }
                 }
                 else{

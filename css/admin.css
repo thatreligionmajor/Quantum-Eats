@@ -150,6 +150,12 @@ table tr td {
     padding: 2%;
 }
 
+/* CSS for Login */
+.login {
+    background: #809b8d;
+    width: 30%;
+    margin: 5% auto;
+}
 
 /* CSS for Footer */
 
@@ -157,4 +163,5 @@ table tr td {
     background: #EFFDF5;
     color: #92AD9F;
     border-top: 1px solid #92AD9F;
+    padding: 2%;
 }
