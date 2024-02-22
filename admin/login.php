@@ -9,12 +9,12 @@
                 <!-- Login Form Starts Here -->
                 <form action="" method="POST">
                     <div class="inputContainer">
-                        <input type="text" name="username" placeholder="Enter your username" class="input">
+                        <input type="text" name="username" placeholder="Username" class="input">
                         <label for="" class="label">Username</label>
                     </div>
                     <!-- <br> -->
                     <div class="inputContainer">
-                        <input type="password" name="password" placeholder="Enter your password" class="input">
+                        <input type="password" name="password" placeholder="Password" class="input">
                         <label for="" class="label">Password</label>
                     </div>
                     <!-- <br> -->
