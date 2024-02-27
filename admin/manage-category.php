@@ -11,7 +11,7 @@
                     <br />
                     <br />
                     <br />
-                    <a href="#" class ="button btn-primary">Add Category</a>
+                    <a href="<?php echo SITEURL; ?>admin/add-category.php" class ="button btn-primary">Add Category</a>
                     <br />
                 </div>
                 <table class="tbl-full">
