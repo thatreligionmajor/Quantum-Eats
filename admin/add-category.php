@@ -1,4 +1,4 @@
-<?php include('components/menu.php'); ?>
+<?php include('components/navbar.php'); ?>
 <!-- Main Content Section Starts -->
 <section>
     <main>
