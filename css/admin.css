@@ -65,58 +65,7 @@ a:hover {
     padding: 1rem 0 1rem 0;
 }
 /* Form CSS */
-.inputContainer {
-    position: relative;
-    height: 45px;
-    width: 100%;
-    margin-bottom: 1.75rem;
-}
-.input {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 100%;
-    width: 100%;
-    border: 1px solid #DADCE0;
-    border-radius: 7px;
-    font-size: 16px;
-    padding: 0 20px;
-    outline: none;
-    background: none;
-    z-index: 1;
-}
-::placeholder {
-    color: transparent;
-}
-.label {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    padding: 0 4px;
-    background-color: #809b8d;
-    color: #DADCE0;
-    font-size: 16px;
-    transition: 0.5s;
-    z-index: 0;
-  }
-.input:focus + .label {
-    top: -7px;
-    left: 3px;
-    z-index: 10;
-    font-size: 14px;
-    font-weight: 600;
-    color: #384B41;
-  }
-.input:focus {
-    border: 2px solid #384B41;
-}
-.input:not(:placeholder-shown)+ .label {
-    top: -7px;
-    left: 3px;
-    z-index: 10;
-    font-size: 14px;
-    font-weight: 600;
-}
+
 /* Table CSS */
 .tbl-full {
     width: 100%;
@@ -210,13 +159,6 @@ table tr td {
     background: #809b8d;
     margin: 1%;
     padding: 2%;
-}
-
-/* CSS for Login */
-.login {
-    background: #809b8d;
-    width: 30%;
-    margin: 5% auto;
 }
 
 /* CSS for Footer */

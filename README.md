@@ -46,5 +46,7 @@ Images created in tandem with [NightCafe](https://creator.nightcafe.studio/studi
   Front End
   http://localhost/Quantum-Eats/index.html
   Back End
-  http://localhost/Quantum-Eats/admin/ 
+  http://localhost/Quantum-Eats/admin/
+  Database
+  http://localhost/phpmyadmin/index.php?route=/database/structure&db=quantum-eats 
    -->
