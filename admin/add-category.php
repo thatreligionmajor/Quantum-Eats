@@ -34,7 +34,13 @@
                             <tr>
                                 <td>Active: </td>
                                 <td>
-                                    <input type="text" name="active" placeholder="Category Name" />
+                                    <input type="radio" name="active" name="active" value="Yes" /> Yes
+                                    <input type="radio" name="active" name="active" value="No" /> No
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <input type="submit" name="submit" value="Add Category" class="button btn-secondary" />
                                 </td>
                             </tr>
                         </table>
