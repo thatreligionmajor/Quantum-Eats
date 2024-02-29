@@ -45,10 +45,41 @@
                             </tr>
                         </table>
                     </form>
-                </div>
-                
+
+                    <?php 
+                        //check whether submit button is clicked
+                        if(isset($_POST['submit']))
+                        {
+                            //get the value from the category form
+                            $title = $_POST['title'];
+                            
+                            //for radio input type, we need to check whether the button is selected or not
+                            if(isset($_POST['featured']))
+                            {
+                                //get the value from the category form
+                                $featured = $_POST['featured'];
+
+                            }
+                            else
+                            {
+                                //set the default value
+                                $featured = "No";
+                            }
+
+                            if(isset($_POST['active']))
+                            {
+                                $active = $_POST['active'];
+                            }
+                            else{
+                                $active = "No";
+                            }
+                        }
+                    ?>
+
+                </div>  
             </div>
         </div>
     </main>
 </section>
 <?php include('components/footer.php'); ?>
+
