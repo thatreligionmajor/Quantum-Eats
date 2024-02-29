@@ -8,6 +8,13 @@
                     <h1>Category Manager</h1>
                     <!-- Button to Add Admin -->
                     <br />
+                    <?php 
+                        if(isset($_SESSION['add']))
+                        {
+                            echo$_SESSION['add'];
+                            unset($_SESSION['add']);
+                        }
+                    ?>
                     <br />
                     <br />
                     <br />
