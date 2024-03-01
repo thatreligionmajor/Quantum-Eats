@@ -24,37 +24,77 @@
                 <table class="tbl-full">
                     <tr>
                         <th>Serial Number</th>
-                        <th>Full Name</th>
-                        <th>Username</th>
+                        <th>Category</th>
+                        <th>Image</th>
+                        <th>Featured</th>
+                        <th>Active</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
-                        <td>1. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
+                    <?php 
+                    //query to get all categories from database
+                        $sql= "SELECT * FROM tbl_category";
+                        //execute query
+                        $res = mysqli_query($conn, $sql);
+                        //count rows
+                        $count = mysqli_num_rows($res);
+                        //create serial number
+                        $sn=1;
+
+                        //check whether we have data in the database
+                        if($count > 0)
+                        {
+                            //we have data
+                            //get the data and display it
+                            while($row=mysqli_fetch_assoc($res))
+                            {
+                                $id = $row['id'];
+                                $title = $row['title'];
+                                $image_name = $row['image_name'];
+                                $featured = $row['featured'];
+                                $active = $row['active'];
+                                ?>
+
+                                <tr>
+                                    <td><?php echo $sn++; ?></td>
+                                    <td><?php echo $title; ?></td>
+                                    <td>
+                                        <?php 
+                                            if($image_name!="" && $image_name!=null)
+                                            {
+                                                ?>
+                                                <img src="<?php echo SITEURL; ?>images/categories/<?php echo $image_name; ?>" alt="<?php echo $title ?>" width="5%" >
+                                                <?php
+                                            }
+                                            else 
+                                            {
+                                               echo "<div class='error'>No Image Available</div>";
+                                            }
+                                        ?>
+                                    </td>
+                                    <td><?php echo $featured; ?></td>
+                                    <td><?php echo $active; ?></td>
+                                    <td>
+                                        <a href="#" class ="button btn-secondary">Update Category</a>
+                                        <a href="#" class ="button btn-danger">Delete Category</a>
+                                    </td>
+                                </tr>
+
+                                <?php
+                            }
+                        }
+                        else{
+                            //we do not have data
+                            ?>
+                                <tr>
+                                    <td colspan="6">
+                                        <div class="error">
+                                            No Category Added
+                                        </div>
+                                    </td>
+                                </tr>
+                            <?php
+                        }
+                    ?>
                 </table>
             </div>
         </div>
