@@ -11,8 +11,18 @@
                     <?php 
                         if(isset($_SESSION['add']))
                         {
-                            echo$_SESSION['add'];
+                            echo $_SESSION['add'];
                             unset($_SESSION['add']);
+                        }
+                        if(isset($_SESSION['remove']))
+                        {
+                            echo $_SESSION['remove'];
+                            unset($_SESSION['remove']);
+                        }
+                        if(isset($_SESSION['delete']))
+                        {
+                            echo $_SESSION['delete'];
+                            unset($_SESSION['delete']);
                         }
                     ?>
                     <br />
