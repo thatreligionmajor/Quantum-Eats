@@ -72,7 +72,7 @@
                                             if($image_name!="" && $image_name!=null)
                                             {
                                                 ?>
-                                                <img src="<?php echo SITEURL; ?>images/categories/<?php echo $image_name; ?>" alt="<?php echo $title ?>" width="5%" >
+                                                <img src="<?php echo SITEURL; ?>images/categories/<?php echo $image_name; ?>" alt="<?php echo $title ?>" width="10%" >
                                                 <?php
                                             }
                                             else 
