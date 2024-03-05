@@ -3,7 +3,7 @@
 
 ## Features
 <details>
-<summary><h3>&nbsp;Frontend Features:</h3></summary>
+<summary><h4>&nbsp;Frontend Features:</h4></summary>
 <br>
 <p><b>Interactive Menu:</b> Explore a curated menu of molecular gastronomy dishes, each with detailed descriptions and images.</p>
 <p><b>Order Placement:</b> Easily navigate through the menu to select and place orders for your desired dishes.</p>
