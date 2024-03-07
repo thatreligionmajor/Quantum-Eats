@@ -21,7 +21,24 @@
                     
                     <form action="" method="POST" >
                         <table class="tbl-30">
-                            <?php echo "Update Category"; ?>
+                            <tr>
+                                <td>Title: </td>
+                                <td>
+                                    <input type="text" name="title" value="" placeholder=""/>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Current Image:</td>
+                                <td>
+                                    Image will be displayed here
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>New Image:</td>
+                                <td>
+                                    
+                                </td>
+                            </tr>
                         </table>
                     </form>
                 </div>                
