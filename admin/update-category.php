@@ -58,7 +58,18 @@
                             <tr>
                                 <td>Current Image:</td>
                                 <td>
-                                    Image will be displayed here
+                                    <?php 
+                                        if($current_image != "")
+                                        {
+                                            ?>
+                                            <img src="<?php echo SITEURL; ?>images/categories/<?php echo $current_image; ?>" width="50%" />
+                                            <?php
+                                        }
+                                        else
+                                        {
+                                            echo "<div class=='error'>Image Not Added</div>";
+                                        }
+                                    ?>
                                 </td>
                             </tr>
                             <tr>
