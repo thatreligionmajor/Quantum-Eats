@@ -94,11 +94,33 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
+                                    <input type="hidden" name="current_image" value="<?php echo $current_image; ?>">
+                                    <input type="hidden" name="id" value="<?php echo $id; ?>" >
                                     <input type="submit" name="submit" value="Update Category" class="button btn-secondary" />
                                 </td>
                             </tr>
                         </table>
                     </form>
+
+                    <?php 
+                        if(isset($_POST['submit']))
+                        {
+                            //echo  "Clicked";
+                            //1. get all values from form
+                            $id = $_POST['id'];
+                            $title = $_POST['title'];
+                            $current_image = $_POST['current_image'];
+                            $featured = $_POST['featured'];
+                            $active = $_POST['active'];
+
+                            //2. update the new image
+
+                            //3. update the database
+
+                            //4. redirect to manage category with a message
+                        }
+                    ?>
+
                 </div>                
             </div>
         </div>
