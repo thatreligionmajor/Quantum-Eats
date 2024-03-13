@@ -114,7 +114,26 @@
                             $active = $_POST['active'];
 
                             //2. update the new image
-
+                            //a. check whether new image is selected
+                            if(isset($_FILES['image']['name']))
+                            {
+                                //i. get the image details
+                                $image_name = $_FILES['image']['name'];
+                                if($image_name!="")
+                                {
+                                    //image available
+                                    
+                                }
+                                else
+                                {
+                                    $image_name = $current_image;
+                                }
+                            }
+                            else
+                            {
+                                //ii. 
+                                $image_name = $current_image;
+                            }
                             //3. update the database
                             $sql2 = "UPDATE tbl__category SET 
                                 title = 
