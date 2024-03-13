@@ -116,8 +116,28 @@
                             //2. update the new image
 
                             //3. update the database
-
+                            $sql2 = "UPDATE tbl__category SET 
+                                title = 
+                                $title',
+                                featured = $featured,
+                                active = $active
+                                WHERE id = $id
+                                ";
+                                $res = mysqli_query($conn, $sql2);
                             //4. redirect to manage category with a message
+                            //a. check whether query executed
+                            if($res2==true)
+                            {
+                                //updated
+                                $_SESSION['update'] = "<div class='success'>Category Updated Successfully</div>";
+                                header('location:'.SITEURL.'admin/manage-category.php');
+                            }
+                            else
+                            {
+                                //failed 
+                                $_SESSION['update'] = "<div class='error'>Failed to Updated Category </div>";
+                                header('location:'.SITEURL.'admin/manage-category.php');
+                            }
                         }
                     ?>
 
