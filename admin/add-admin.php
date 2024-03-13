@@ -78,7 +78,7 @@
         password = '$password'
         ";
         //3. execute query and save the data into the database
-        $res = mysqli_query($conn, $sql) or die(mysquli_error());
+        $res = mysqli_query($conn, $sql) or die(mysqli_error());
         //4. check whether the (query is executed) data is inserted or not and display the appropriate message
         if($res==TRUE)
         {
@@ -87,7 +87,7 @@
             //create a session variable to display message
             $_SESSION['add'] = "<div class='success'>Admin Successfully Created</div>";
             //redirect page to Admin Manager
-            header('location:' . SITEURL . 'admin/manage-admin.php');
+            header('location:'.SITEURL.'admin/manage-admin.php');
         }
         else {
             //failed to insert data
@@ -95,7 +95,7 @@
             //create a session variable to display message
             $_SESSION['add'] = "<div class='error'>Failed to Add Admin</div>";
             //redirect page to Add Admin
-            header('location:' . SITEURL . 'admin/add-admin.php');
+            header('location:'.SITEURL.'admin/add-admin.php');
         }
     }
 ?>
