@@ -101,7 +101,7 @@
                                 //upload the image only if image is selected
                                 if($image_name != "")
                                 {
-                                    //auo rename the image
+                                    //auto rename the image
                                     //get the extension of our image
                                     $ext = end(explode('.', $image_name));
                                     //rename the image

@@ -122,7 +122,43 @@
                                 if($image_name!="")
                                 {
                                     //image available
-                                    
+                                    //A. upload the new image
+                                    //auto rename the image
+                                    //get the extension of our image
+                                    $ext = end(explode('.', $image_name));
+                                    //rename the image
+                                    $image_name = "food_category_".rand(000, 999).'.'.$ext;
+    
+                                    $source_path = $_FILES['image']['tmp_name'];
+                                    $destination_path = "../images/categories/".$image_name;
+    
+                                    //upload the image
+                                    $upload = move_uploaded_file($source_path, $destination_path);
+                                    //check whether the image is uploaded
+                                    if($upload==false)
+                                    {
+                                        //set message
+                                        $_SESSION['upload']   = "<div class='error'>Failed to Upload Image</div>";
+                                        //if not, stop the process and redirect with an error message
+                                        header('location:'.SITEURL.'admin/manage-category.php');
+                                        //stop the process
+                                        die();
+                                    }
+                                    //B. remove the current (previous) image if available
+                                    if($current_image!="") 
+                                    {
+                                        $remove_path = "../images/categories/".$current_image;
+                                        $remove = unlink($remove_path);
+                                        //check whether the image is removed
+                                        if($remove==false)
+                                        {
+                                            //failed to remove the image
+                                            //display the message and stop the process
+                                            $_SESSION['failed-remove'] = "<div class='error'>Failed to Remove Current Image</div>";                                    
+                                            header('location:'.SITEURL.'admin/manage-category.php');
+                                            die();
+                                        }
+                                    }
                                 }
                                 else
                                 {
@@ -135,14 +171,16 @@
                                 $image_name = $current_image;
                             }
                             //3. update the database
-                            $sql2 = "UPDATE tbl__category SET 
-                                title = 
-                                $title',
-                                featured = $featured,
-                                active = $active
+                            //a. create the query
+                            $sql2 = "UPDATE tbl_category SET 
+                                title = '$title',
+                                image_name = '$image_name',
+                                featured = '$featured',
+                                active = '$active'
                                 WHERE id = $id
                                 ";
-                                $res = mysqli_query($conn, $sql2);
+                            //b. execute the query
+                            $res2 = mysqli_query($conn, $sql2);
                             //4. redirect to manage category with a message
                             //a. check whether query executed
                             if($res2==true)
