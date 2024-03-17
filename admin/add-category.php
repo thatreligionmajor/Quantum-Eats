@@ -28,6 +28,9 @@
                     <form action="" method="POST" enctype="multipart/form-data" >
                         <table class="tbl-30">
                             <tr>
+                                <th colspan="2">Add A Menu Category</th>
+                            </tr>
+                            <tr>
                                 <td>Title: </td>
                                 <td>
                                     <input type="text" name="title" placeholder="Category Name" />

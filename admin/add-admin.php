@@ -23,8 +23,7 @@
                     <form action="" method="POST" >
                         <table class="tbl-30">
                             <tr>
-                                <th>Label</th>
-                                <th>Input</th>
+                                <th colspan="2">Add Admin</th>
                             </tr>
                             <tr>
                                 <td>Full Name: </td>
