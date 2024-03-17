@@ -6,7 +6,6 @@
             <div class="wrapper">
                 <div class="header">
                     <h1>Add Admin</h1>
-                    <!-- Button to Add Admin -->
                     <br />
                     <?php 
                         if(isset($_SESSION['add'])) // check if session is set
@@ -18,7 +17,6 @@
                     <br />
                     <br />
                     <br />
-                    <!-- <a href="add-admin.php" class ="button btn-primary">Add Admin</a> -->
                     <br />
                     <form action="" method="POST" >
                         <table class="tbl-30">

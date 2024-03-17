@@ -14,7 +14,6 @@
                     <br />
                     <br />
                     <br />
-                    <!-- <a href="add-admin.php" class ="button btn-primary">Add Admin</a> -->
                     <br />
                     <form action="" method="POST" >
                         <table class="tbl-30">

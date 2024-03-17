@@ -6,7 +6,6 @@
             <div class="wrapper">
                 <div class="header">
                     <h1>Add Category</h1>
-                    <!-- Button to Add Category -->
                     <br />
                     <?php 
                         if(isset($_SESSION['add']))
