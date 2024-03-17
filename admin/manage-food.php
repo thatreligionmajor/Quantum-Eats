@@ -11,7 +11,7 @@
                     <br />
                     <br />
                     <br />
-                    <a href="#" class ="button btn-primary">Add Food</a>
+                    <a href="<?php echo SITEURL; ?>admin/add-food.php" class ="button btn-primary">Add Food</a>
                     <br />
                 </div>
                 <table class="tbl-full">
