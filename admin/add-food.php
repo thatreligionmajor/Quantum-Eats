@@ -46,10 +46,37 @@
                             <td>Category: </td>
                                 <td>
                                    <select name="category">
-                                        <option value="" disabled selected>Select Category</option>
-                                        <option value="1">Breakfast</option>
-                                        <option value="2">Lunch</option>
-                                        <option value="3">Dinner</option>
+                                       <option value="" disabled selected>Select Category</option>
+                                        <?php
+                                            //create PHP code to display the categories from the database
+                                            //1. create SQL query to get all Active Categories from the database
+                                            //a. the query
+                                            $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
+                                            //b. the execution
+                                            $res = mysqli_query($conn, $sql);
+                                            //c. count rows to check whether there are categories
+                                            $count = mysqli_num_rows($res);
+                                            //2. display categories on the dropdown
+                                            if($count>0)
+                                            {
+                                                //there are categories
+                                                while($row=mysqli_fetch_assoc($res))
+                                                {
+                                                    //get the details of the categories
+                                                    $id = $row['id'];
+                                                    $title = $row['title'];
+                                                    ?>
+                                                    <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                                                    <?php
+                                                }
+                                            }
+                                            else{
+                                                //there are no categories
+                                                ?>
+                                                <option value="0">No Categories Found</option>
+                                                <?php
+                                            }
+                                        ?>
                                    </select>
                             </td>
                             <tr>
