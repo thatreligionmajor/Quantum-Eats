@@ -8,7 +8,11 @@
                     <h1>Add Food</h1>
                     <br />
                     <?php 
-                        
+                        if(isset($_SESSION['upload']))
+                        {
+                            echo $_SESSION['upload'];
+                            unset($_SESSION['upload']);
+                        }                    
                     ?>
                     <br />
                     <br />
@@ -101,7 +105,70 @@
                         </table>
                     </form>
                     <?php
-                    
+                        //check whether the buttons is clicked
+                        if(isset($_POST['submit']))
+                        {
+                            //add the food to the database
+                            //1. get the data from the form
+                            //A. get input data
+                            $title = $_POST['title'];
+                            $description = $_POST['description'];
+                            $price = $_POST['price'];
+                            $category = $_POST['category'];
+                            //B. get radio data
+                            if(isset($_POST['featured']))
+                            {
+                                $featured = $_POST['featured'];
+                            }
+                            else{
+                                $featured = "No"; //this is the default value
+                            }
+                            if(isset($_POST['active']))
+                            {
+                                $active = $_POST['active'];
+                            }
+                            else
+                            {
+                                $active = "No";
+                            }
+                            //2. upload the image if selected
+                            //A. check if the image is selected
+                            if(isset($_FILES['image']['name']))
+                            {
+                                //i. get the details of the image
+                                $image_name = $_FILES['image']['name'];
+                                //ii. check whether the image is selected
+                                if($image_name!="")
+                                {
+                                    //a. rename the image
+                                    $ext = end(explode('.', $image_name));
+                                    $image_name = "Food-Name-".rand(0000,9999).".".$ext;
+                                    //b. get the source path and destination path
+                                    $src=$_FILES['image']['tmp_name'];
+                                    $dst = "../images/foods/".$image_name;
+                                    //c. upload the image
+                                    $upload = move_uploaded_file($src, $dst);
+                                    //d. check whether the image uploaded
+                                    if($upload==false)
+                                    {
+                                        //redirect with an error message
+                                        $_SESSION['upload'] ="<div class='error'>Failed to Upload Image</div>";
+                                        header('location:'.SITEURL.'admin/add-food.php');
+                                        //stop the process
+                                        die();
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                //i. save a default value
+                                $image_name = "";
+                            }
+                            //3. insert the data into the database
+                            
+                            //4. redirect with message to the manage-food page
+
+                        }
                     ?>
                 </div>
             </div>
