@@ -32,29 +32,14 @@
                     </tr>
                     <tr>
                         <td>1. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
+                        <td>a food</td>
+                        <td>$20</td>
+                        <td>img</td>
+                        <td>Yes</td>
+                        <td>Yes</td>
                         <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3. </td>
-                        <td>Your Name</td>
-                        <td>yourusername</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Admin</a>
-                            <a href="#" class ="button btn-danger">Delete Admin</a>
+                            <a href="#" class ="button btn-secondary">Update Food</a>
+                            <a href="#" class ="button btn-danger">Delete Food</a>
                         </td>
                     </tr>
                 </table>
