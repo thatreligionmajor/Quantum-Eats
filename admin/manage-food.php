@@ -6,8 +6,14 @@
             <div class="wrapper">
             <div class="header">
                     <h1>Food Manager</h1>
-                    <!-- Button to Add Admin -->
                     <br />
+                    <?php
+                        if(isset($_SESSION['add']))
+                        {
+                            echo $_SESSION['add'];
+                            unset($_SESSION['add']);
+                        }
+                    ?>
                     <br />
                     <br />
                     <br />
@@ -17,8 +23,11 @@
                 <table class="tbl-full">
                     <tr>
                         <th>Serial Number</th>
-                        <th>Full Name</th>
-                        <th>Username</th>
+                        <th>Title</th>
+                        <th>Price</th>
+                        <th>Image</th>
+                        <th>Featured</th>
+                        <th>Active</th>
                         <th>Actions</th>
                     </tr>
                     <tr>

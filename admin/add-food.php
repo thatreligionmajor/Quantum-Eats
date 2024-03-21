@@ -115,6 +115,7 @@
                             $description = $_POST['description'];
                             $price = $_POST['price'];
                             $category = $_POST['category'];
+
                             //B. get radio data
                             if(isset($_POST['featured']))
                             {
@@ -131,6 +132,7 @@
                             {
                                 $active = "No";
                             }
+
                             //2. upload the image if selected
                             //A. check if the image is selected
                             if(isset($_FILES['image']['name']))
@@ -165,8 +167,31 @@
                                 $image_name = "";
                             }
                             //3. insert the data into the database
-                            
-                            //4. redirect with message to the manage-food page
+                            //A. create an sql query
+                            $sql2 = "INSERT INTO tbl_food SET
+                            title = '$title',
+                            description = '$description',
+                            price = $price,
+                            image_name = '$image_name',
+                            category_id = $category,
+                            featured = '$featured',
+                            active = '$active'
+                            ";
+                            //B. execute the sql query
+                            $res2 = mysqli_query($conn, $sql2);
+                            //C. check whether the data was inserted
+                            if($res2==true)
+                            {
+                                //i. data inserted successfully
+                                $_SESSION['add'] = "<div class='success'>Food Added Successfully</div>";
+                                header('location:'.SITEURL.'admin/manage-food.php');
+                            }
+                            else
+                            {
+                                //ii. redirect with message to the manage-food page
+                                $_SESSION['add'] = "<div class='error'>Failed to Add Food</div>";
+                                header('location:'.SITEURL.'admin/manage-food.php');
+                            }
 
                         }
                     ?>

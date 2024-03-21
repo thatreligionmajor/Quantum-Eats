@@ -6,7 +6,6 @@
             <div class="wrapper">
             <div class="header">
                     <h1>Category Manager</h1>
-                    <!-- Button to Add Admin -->
                     <br />
                     <?php 
                         if(isset($_SESSION['add']))
