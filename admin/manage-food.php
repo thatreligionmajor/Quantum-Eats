@@ -30,18 +30,74 @@
                         <th>Active</th>
                         <th>Actions</th>
                     </tr>
-                    <tr>
-                        <td>1. </td>
-                        <td>a food</td>
-                        <td>$20</td>
-                        <td>img</td>
-                        <td>Yes</td>
-                        <td>Yes</td>
-                        <td>
-                            <a href="#" class ="button btn-secondary">Update Food</a>
-                            <a href="#" class ="button btn-danger">Delete Food</a>
-                        </td>
-                    </tr>
+                    <?php
+
+                    // create sql query to get all food data
+                    $sql = "SELECT * FROM tbl_food";
+                    // execute sql query
+                    $res = mysqli_query($conn, $sql);
+                    // count rows to check whether there is data
+                    $count =  mysqli_num_rows($res);
+
+                    //create a serial number variable and set the default value as 1
+                    $sn=1;
+
+                    if($count>0)
+                    {
+                        //get the food from the database and display it here
+                        while($row=mysqli_fetch_assoc($res))
+                        {
+                            //get the value from the individual columns in the database table
+                            $id=$row['id'];
+                            $title=$row['title'];
+                            $price=$row['price'];
+                            $image_name=$row['image_name'];
+                            $featured=$row['featured'];
+                            $active=$row['active'];
+                            ?>
+
+                            <tr>
+                                <td><?php echo $sn++; ?></td>
+                                <td><?php echo $title; ?></td>
+                                <td>$<?php echo $price; ?></td>
+                                <td>
+                                    <?php 
+                                        if($image_name=="")
+                                        {
+                                            echo "<div class='error'>No Image Available</div>";
+                                        }
+                                        else
+                                        {
+                                            ?>
+                                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name;?>" alt="<?php echo $title; ?>" width="10%" />
+                                            <?php
+                                        }
+                                    ?>
+                                </td>
+                                <td><?php echo $featured; ?></td>
+                                <td><?php echo $active; ?></td>
+                                <td>
+                                    <a href="#" class ="button btn-secondary">Update Food</a>
+                                    <a href="#" class ="button btn-danger">Delete Food</a>
+                                </td>
+                            </tr>
+
+                            <?php
+                        }
+                    }
+                    else
+                    {
+                        //there is no food in the database
+                        echo 
+                        "<tr>
+                            <td class='error' colspan ='7'>
+                                Please add an item to the menu.
+                            </td>
+                        </tr>";
+                    }
+
+                    ?>
+                    
                 </table>
             </div>
         </div>
