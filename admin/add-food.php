@@ -18,7 +18,7 @@
                     <br />
                     <br />
                     <br />
-                    <form action="" method="POST" >
+                    <form action="" method="POST" enctype="multipart/form-data" >
                         <table class="tbl-30">
                             <tr>
                                 <th colspan="2">Add a Food Item</th>
@@ -47,42 +47,46 @@
                                     <input type="file" name="image">
                                 </td>
                             </tr>
-                            <td>Category: </td>
-                                <td>
-                                   <select name="category">
-                                       <option value="" disabled selected>Select Category</option>
-                                        <?php
-                                            //create PHP code to display the categories from the database
-                                            //1. create SQL query to get all Active Categories from the database
-                                            //a. the query
-                                            $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
-                                            //b. the execution
-                                            $res = mysqli_query($conn, $sql);
-                                            //c. count rows to check whether there are categories
-                                            $count = mysqli_num_rows($res);
-                                            //2. display categories on the dropdown
-                                            if($count>0)
-                                            {
-                                                //there are categories
-                                                while($row=mysqli_fetch_assoc($res))
+                            <tr>
+                                <td>Category: </td>
+                                    <td>
+                                    <select name="category">
+                                        <option value="" disabled selected>Select Category</option>
+                                            <?php
+                                                //create PHP code to display the categories from the database
+                                                //1. create SQL query to get all Active Categories from the database
+                                                //a. the query
+                                                $sql = "SELECT * FROM tbl_category WHERE active='Yes'";
+                                                //b. the execution
+                                                $res = mysqli_query($conn, $sql);
+                                                //c. count rows to check whether there are categories
+                                                $count = mysqli_num_rows($res);
+                                                //2. display categories on the dropdown
+                                                if($count>0)
                                                 {
-                                                    //get the details of the categories
-                                                    $id = $row['id'];
-                                                    $title = $row['title'];
+                                                    //there are categories
+                                                    while($row=mysqli_fetch_assoc($res))
+                                                    {
+                                                        //get the details of the categories
+                                                        $id = $row['id'];
+                                                        $title = $row['title'];
+                                                        ?>
+                                                        <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                                                        <?php
+                                                    }
+                                                }
+                                                else
+                                                {
+                                                    //there are no categories
                                                     ?>
-                                                    <option value="<?php echo $id; ?>"><?php echo $title; ?></option>
+                                                    <option value="0">No Categories Found</option>
                                                     <?php
                                                 }
-                                            }
-                                            else{
-                                                //there are no categories
-                                                ?>
-                                                <option value="0">No Categories Found</option>
-                                                <?php
-                                            }
-                                        ?>
-                                   </select>
-                            </td>
+                                            ?>
+                                    </select>
+                                </td>
+                            </tr>
+
                             <tr>
                                 <td>Featured: </td>
                                 <td>
@@ -90,6 +94,7 @@
                                     <input type="radio" name="featured" value="No" /> No
                                 </td>
                             </tr>
+
                             <tr>
                                 <td>Active: </td>
                                 <td>
@@ -97,6 +102,7 @@
                                     <input type="radio" name="active" name="active" value="No" /> No
                                 </td>
                             </tr>
+
                             <tr>
                                 <td colspan="2">
                                     <input type="submit" name="submit" value="Add Food" class="button btn-secondary" />
@@ -104,6 +110,7 @@
                             </tr>
                         </table>
                     </form>
+
                     <?php
                         //check whether the buttons is clicked
                         if(isset($_POST['submit']))
@@ -121,7 +128,8 @@
                             {
                                 $featured = $_POST['featured'];
                             }
-                            else{
+                            else
+                            {
                                 $featured = "No"; //this is the default value
                             }
                             if(isset($_POST['active']))
@@ -146,7 +154,7 @@
                                     $ext = end(explode('.', $image_name));
                                     $image_name = "Food-Name-".rand(0000,9999).".".$ext;
                                     //b. get the source path and destination path
-                                    $src=$_FILES['image']['tmp_name'];
+                                    $src= $_FILES['image']['tmp_name'];
                                     $dst = "../images/foods/".$image_name;
                                     //c. upload the image
                                     $upload = move_uploaded_file($src, $dst);

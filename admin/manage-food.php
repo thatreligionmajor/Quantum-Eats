@@ -13,6 +13,21 @@
                             echo $_SESSION['add'];
                             unset($_SESSION['add']);
                         }
+                        if(isset($_SESSION['delete']))
+                        {
+                            echo $_SESSION['delete'];
+                            unset($_SESSION['delete']);
+                        }
+                        if(isset($_SESSION['remove']))
+                        {
+                            echo $_SESSION['remove'];
+                            unset($_SESSION['remove']);
+                        }
+                        if(isset($_SESSION['unauthorized']))
+                        {
+                            echo $_SESSION['unauthorized'];
+                            unset($_SESSION['unauthorized']);
+                        }
                     ?>
                     <br />
                     <br />
@@ -69,7 +84,7 @@
                                         else
                                         {
                                             ?>
-                                            <img src="<?php echo SITEURL; ?>images/food/<?php echo $image_name;?>" alt="<?php echo $title; ?>" width="10%" />
+                                            <img src="<?php echo SITEURL; ?>images/foods/<?php echo $image_name;?>" alt="<?php echo $title; ?>" width="10%" />
                                             <?php
                                         }
                                     ?>
@@ -78,7 +93,7 @@
                                 <td><?php echo $active; ?></td>
                                 <td>
                                     <a href="#" class ="button btn-secondary">Update Food</a>
-                                    <a href="#" class ="button btn-danger">Delete Food</a>
+                                    <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class ="button btn-danger">Delete Food</a>
                                 </td>
                             </tr>
 
