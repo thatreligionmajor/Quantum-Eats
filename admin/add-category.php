@@ -105,7 +105,8 @@
                                 {
                                     //auto rename the image
                                     //get the extension of our image
-                                    $ext = end(explode('.', $image_name));
+                                    $tmp = explode('.', $image_name); // end(); requires you to pass a variable
+                                    $ext = end($tmp);
                                     //rename the image
                                     $image_name = "food_category_".rand(000, 999).'.'.$ext;
     

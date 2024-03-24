@@ -151,7 +151,8 @@
                                 if($image_name!="")
                                 {
                                     //a. rename the image
-                                    $ext = end(explode('.', $image_name));
+                                    $tmp = explode('.', $image_name); // end(); requires you to pass a variable
+                                    $ext = end($tmp);
                                     $image_name = "Food-Name-".rand(0000,9999).".".$ext;
                                     //b. get the source path and destination path
                                     $src= $_FILES['image']['tmp_name'];
