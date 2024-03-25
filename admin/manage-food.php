@@ -92,7 +92,7 @@
                                 <td><?php echo $featured; ?></td>
                                 <td><?php echo $active; ?></td>
                                 <td>
-                                    <a href="#" class ="button btn-secondary">Update Food</a>
+                                    <a href="<?php echo SITEURL; ?>admin/update-food.php?id=<?php echo $id; ?>" class ="button btn-secondary">Update Food</a>
                                     <a href="<?php echo SITEURL; ?>admin/delete-food.php?id=<?php echo $id; ?>&image_name=<?php echo $image_name; ?>" class ="button btn-danger">Delete Food</a>
                                 </td>
                             </tr>
