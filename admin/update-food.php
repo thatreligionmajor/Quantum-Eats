@@ -77,7 +77,10 @@
                                                     $category_title = $row['title'];
                                                     $category_id = $row['id'];
 
-                                                    echo "<option value='$category_id'>$category_title</option>";
+                                                    //echo "<option value='$category_id'>$category_title</option>";
+                                                    ?>
+                                                    <option value="<?php echo $category_id; ?>"><?php echo $category_title; ?></option>
+                                                    <?php
                                                 }
                                             }
                                             else
