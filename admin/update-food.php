@@ -14,6 +14,29 @@
                     <br />
                     <?php
                         //check whether id is set
+                        if(isset($_GET['id']))
+                        {
+                            //get all the details
+                            $id = $_GET['id'];
+                            //create sql query
+                            $sql2 = "SELECT * FROM tbl_food WHERE id =$id";
+                            //execute sql query
+                            $res2= mysqli_query($conn, $sql2);
+                            //get the value based on the query
+                            $row = mysqli_fetch_assoc($res2);
+                            //get the individual values of the selected food
+                            $title = $row['title'];
+                            $description = $row['description'];
+                            $price = $row['price'];
+                            $current_image = $row['image_name'];
+                            $current_category = $row['category_id'];
+                            $featured = $row['featured'];
+                            $active = $row['active'];
+                        }
+                        else
+                        {
+                            header('location:'.SITEURL.'admin/manage-food.php');
+                        }
                     ?>
                     <form action="" method="POST" enctype="multipart/form-data" >
                         <table class="tbl-30">
