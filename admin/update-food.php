@@ -23,15 +23,15 @@
                             //execute sql query
                             $res2= mysqli_query($conn, $sql2);
                             //get the value based on the query
-                            $row = mysqli_fetch_assoc($res2);
+                            $row2 = mysqli_fetch_assoc($res2);
                             //get the individual values of the selected food
-                            $title = $row['title'];
-                            $description = $row['description'];
-                            $price = $row['price'];
-                            $current_image = $row['image_name'];
-                            $current_category = $row['category_id'];
-                            $featured = $row['featured'];
-                            $active = $row['active'];
+                            $title = $row2['title'];
+                            $description = $row2['description'];
+                            $price = $row2['price'];
+                            $current_image = $row2['image_name'];
+                            $current_category = $row2['category_id'];
+                            $featured = $row2['featured'];
+                            $active = $row2['active'];
                         }
                         else
                         {
