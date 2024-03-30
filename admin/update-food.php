@@ -49,7 +49,7 @@
                             <tr>
                                 <td>Description:</td>
                                 <td>
-                                    <textarea name="description" cols="30" rows="10"></textarea>
+                                    <textarea name="description" cols="30" rows="10"><?php echo $description ?></textarea>
                                 </td>
                             </tr>
                             <tr>
@@ -65,7 +65,7 @@
                                         if($current_image != "")
                                         {
                                             ?>
-                                            <img src="<?php echo SITEURL; ?>images/foods/<?php echo $current_image; ?>" width="50%" />
+                                            <img src="<?php echo SITEURL; ?>images/foods/<?php echo $current_image; ?>" alt="<?php echo $title ?>" width="50%" />
                                             <?php
                                         }
                                         else
