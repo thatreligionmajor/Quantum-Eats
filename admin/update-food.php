@@ -142,6 +142,25 @@
 
                     <?php
 
+                        if(isset($_POST['submit']))
+                        {
+                            //echo "Button Clicked";
+                            //1. Get all the data from the form
+                            $id = $_POST['id'];
+                            $title = $_POST['title'];
+                            $description = $_POST['description'];
+                            $price = $_POST['price'];
+                            $current_image = $_POST['current_image'];
+                            $category = $_POST['category'];
+                            
+                            $featured = $_POST['featured'];
+                            $active = $_POST['active'];
+                            //2. Upload the image if selected
+                            //3. Remove the image if the new image is uploaded and current image exists
+                            //4. Update the food in the database
+                            //5. Redirect to Manage food with session message
+                        }
+
                     ?>
 
                 </div>                
