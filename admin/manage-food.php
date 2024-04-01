@@ -28,6 +28,11 @@
                             echo $_SESSION['unauthorized'];
                             unset($_SESSION['unauthorized']);
                         }
+                        if(isset($_SESSION['upload']))
+                        {
+                            echo $_SESSION['upload'];
+                            unset($_SESSION['upload']);
+                        }
                     ?>
                     <br />
                     <br />

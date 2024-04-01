@@ -155,8 +155,49 @@
                             
                             $featured = $_POST['featured'];
                             $active = $_POST['active'];
+
                             //2. Upload the image if selected
-                            //3. Remove the image if the new image is uploaded and current image exists
+                            if(isset($_FILES['image']['name']))
+                            {
+                                $image_name = $_FILES['image']['name'];
+                                if($image_name != "")
+                                {
+                                    //A. Uploading New Image
+                                    $ext = end(explode('.', $image_name));
+                                    $image_name = "Food-Name-".rand(0000, 9999).'.'.$ext; 
+
+                                    $src_path = $_FILES['image']['tmp_name'];
+                                    $dest_path = "../images/food/".$image_name;
+
+                                    $upload = move_uploaded_file($src_path, $dest_path);
+
+                                    if($upload==false)
+                                    {
+                                        $_SESSION['upload'] = "<div class='error'>Failed to Upload New Image</div>";
+                                        header('location:'.SITEURL.'admin/manage-food.php');
+                                        die();
+                                    }
+
+                            //3. Remove the image if the new image is uploaded and current image exists                                    if($current_image!="")
+                                    {
+                                        $remove_path = "../images/foods/".$current_image;
+                                        $remove = unlink($remove_path);
+
+                                        //check if the image was removed
+                                        if($remove == false)
+                                        {
+                                            $_SESSION['remove'] = "<div class = 'error'>Failed to Remove Current Image</div>";
+                                            header('location:'.SITEURL.'admin/manage-food.php');
+                                            die();
+                                        }
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                $image_name = $current_image;
+                            }
+                            
                             //4. Update the food in the database
                             //5. Redirect to Manage food with session message
                         }
