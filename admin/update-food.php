@@ -163,11 +163,12 @@
                                 if($image_name != "")
                                 {
                                     //A. Uploading New Image
-                                    $ext = end(explode('.', $image_name));
+                                    $ext_arr = explode('.', $image_name);
+                                    $ext = end($ext_arr);
                                     $image_name = "Food-Name-".rand(0000, 9999).'.'.$ext; 
 
                                     $src_path = $_FILES['image']['tmp_name'];
-                                    $dest_path = "../images/food/".$image_name;
+                                    $dest_path = "../images/foods/".$image_name;
 
                                     $upload = move_uploaded_file($src_path, $dest_path);
 
@@ -178,10 +179,13 @@
                                         die();
                                     }
 
-                            //3. Remove the image if the new image is uploaded and current image exists                                    if($current_image!="")
+                            //3. Remove the image if the new image is uploaded and current image exists                                    
+                            if($current_image!="")
                                     {
-                                        $remove_path = "../images/foods/".$current_image;
+                                        $filename = basename($current_image); //extracts just the file name from the path
+                                        $remove_path = "../images/foods/".$filename;
                                         $remove = unlink($remove_path);
+
 
                                         //check if the image was removed
                                         if($remove == false)
@@ -199,11 +203,34 @@
                             }
                             
                             //4. Update the food in the database
-                            //5. Redirect to Manage food with session message
+                            //A. Create SQL Query
+                            $sql3 = "UPDATE tbl_food SET
+                            title = '$title',
+                            description = '$description',
+                            price = $price,
+                            image_name = '$image_name',
+                            category_id = '$category',
+                            featured = '$featured',
+                            active = '$active',
+                            WHERE id=$id
+                            ";
+
+                            //B. Execute the Query
+                            $res3 = mysqli_query($conn, $sql3);
+                            if($res3==true)
+                            {
+                                //query executed and food updated
+                                $_SESSION['update'] = "<div class='success'>Food Updated Successfully</div>";
+                                header('location:'.SITEURL.'admin/manage-food.php');
+                            }
+                            else
+                            {
+                                //failed to update
+                                $_SESSION['update'] = "<div class='error'>Failed to Update Food</div>";
+                                header('location:'.SITEURL.'admin/manage-food.php');
+                            }
                         }
-
                     ?>
-
                 </div>                
             </div>
         </div>
