@@ -28,4 +28,4 @@
     </section>
     <!-- Categories End -->
 
-<?php include('partials-front/footer.php'); ?>
+<?php include('components-front/footer.php'); ?>
