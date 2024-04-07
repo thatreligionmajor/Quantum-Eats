@@ -15,7 +15,7 @@
         <div class="container">
             <div class="logo">
                 <img class="navbar-logo" src="images/boxes.svg" alt="Quantum Eats logo" />
-                <a class="navbar-title" href="#">Quantum Eats</a>
+                <a class="navbar-title" href="<?php echo SITEURL; ?>">Quantum Eats</a>
             </div>
             <div class="nav-menu text-right">
                 <ul>
