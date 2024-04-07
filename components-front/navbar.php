@@ -23,13 +23,13 @@
                         <a href="<?php echo SITEURL; ?>" class="linktext">Home</a>
                     </li>
                     <li>
-                        <a href="#" class="linktext">Categories</a>
+                        <a href="<?php echo SITEURL; ?>categories.php" class="linktext">Categories</a>
                     </li>
                     <li>
-                        <a href="#" class="linktext">Foods</a>
+                        <a href="<?php echo SITEURL; ?>foods.php" class="linktext">Foods</a>
                     </li>
                     <li>
-                        <a href="#" class="linktext">Contact</a>
+                        <a href="<?php echo SITEURL; ?>contact.php" class="linktext">Contact</a>
                     </li>
                 </ul>
             </div>
