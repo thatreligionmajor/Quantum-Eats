@@ -6,7 +6,18 @@
         <form action="" method="POST" class="order">    
             <fieldset>
                 <legend>Selected Item</legend>
-                
+                <div>
+                    <img src="<?php ?>" >
+                </div>
+                <div>
+                    <h3>Title</h3>
+
+                    <p>$ price</p>
+
+                    <div>qty</div>
+
+                    
+                </div>
             </fieldset>
         </form>
     
