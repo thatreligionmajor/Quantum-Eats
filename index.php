@@ -14,13 +14,57 @@
         <div class="container">
             <h2 class="section-header text-center">Molecular Moments</h2>
             <div class="row blur">
-                <a href="#" class="linkrow">
-                    <div class="catcard shadow bigger">
-                            <h3 class="card-title">Breakfast</h3>
-                            <img src="images/molecular-benedict-spheres.jpg" alt="breakfast" class="img-responsive cat-img" />
-                    </div>
-                </a>
-                <a href="#" class="linkrow" >
+
+                <?php 
+                //sql query to display data from database
+                $sql = "SELECT * FROM tbl_category LIMIT 3";
+                //execute query
+                $res = mysqli_query($conn, $sql);
+                //count rows to check whether there is a category
+                $count = mysqli_num_rows($res);
+
+                if($count>0)
+                {
+                    while($row=mysqli_fetch_assoc($res))
+                    {
+                        //get the values of the category
+                        $id = $row['id'];
+                        $title = $row['title'];
+                        $image_name = $row['image_name'];
+                        ?>
+
+                        <a href="category-foods.php" class="linkrow">
+                            <div class="catcard shadow bigger">
+                                    <h3 class="card-title"><?php echo $title; ?></h3>
+
+                                    <?php 
+                                        // check whether the category has an image
+                                        if($image_name =="") 
+                                        {
+                                            echo "<div class='error'>Image Not Available</div>";
+                                        }
+                                        else
+                                        {
+                                            ?>
+                                            <img src="<?php echo SITEURL; ?>images/categories/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive cat-img" />
+                                            <?php
+                                        }
+                                    ?>
+
+                            </div>
+                        </a>
+
+                        <?php
+                    }
+                }
+                else
+                {
+                    echo "<div class='error'>No Category Added</div>";
+                }
+                ?>
+
+                
+                <!-- <a href="#" class="linkrow" >
                     <div class="catcard shadow bigger">
                         <h3 class="card-title">Lunch</h3>
                         <img src="images/quinoa-fusion-salad-cloud.jpg" alt="lunch" class="img-responsive cat-img" />
@@ -31,7 +75,7 @@
                         <h3 class="card-title">Dinner</h3>
                         <img src="images/galactic-gourmet-steak.jpg" alt="dinner" class="img-responsive cat-img" />
                     </div>
-                </a>
+                </a> -->
             </div>
         </div>
     </section>
