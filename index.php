@@ -17,7 +17,7 @@
 
                 <?php 
                 //sql query to display data from database
-                $sql = "SELECT * FROM tbl_category LIMIT 3";
+                $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
                 //execute query
                 $res = mysqli_query($conn, $sql);
                 //count rows to check whether there is a category
