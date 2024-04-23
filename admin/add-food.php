@@ -193,13 +193,13 @@
                             {
                                 //i. data inserted successfully
                                 $_SESSION['add'] = "<div class='success'>Food Added Successfully</div>";
-                                header('location:'.SITEURL.'admin/manage-food.php');
+                                header("location:".SITEURL."admin/manage-food.php");
                             }
                             else
                             {
                                 //ii. redirect with message to the manage-food page
                                 $_SESSION['add'] = "<div class='error'>Failed to Add Food</div>";
-                                header('location:'.SITEURL.'admin/manage-food.php');
+                                header("location:".SITEURL."admin/add-food.php");
                             }
 
                         }
