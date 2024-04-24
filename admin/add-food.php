@@ -201,7 +201,6 @@
                                 $_SESSION['add'] = "<div class='error'>Failed to Add Food</div>";
                                 header("location:".SITEURL."admin/add-food.php");
                             }
-
                         }
                     ?>
                 </div>
